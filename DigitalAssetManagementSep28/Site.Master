@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DigitalAssetManagementSep28.SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<script type="text/javascript" src="Scripts/Sidebar.js"></script>
+    <title>Digital Asset Manager</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+        <div id="header" style="background-color:#1e2667;">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+              <div style="height:69px; width:214px;">
+              <a href="http://www.carrollu.edu/">
+                  <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/carroll_logo.jpg" height="69px" width="214px" BorderWidth=0/>
+              </a>
+              </div>
+              <div style="background-color:#E05206; height:26px;">
+                  <div id="labelDiv" style="padding-left:5px; padding-top: 5px;">
+                      <asp:Label ID="lblUser" runat="server" forecolor="#FFFFFF">
+                         <asp:LoginName ID="LoginName1" runat="server" FormatString="Welcome, {0}" />
+                         </asp:Label>
+                      &nbsp&nbsp&nbsp
+                  </div>
+                  <div id="Div1" style="position:absolute; top:69px; left:150px;">
+                      <asp:LoginView ID="LoginView2" runat="server">
+                          <RoleGroups>
+                              <asp:RoleGroup Roles="Admin">
+                                  <ContentTemplate>
+                                      <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                                          <Items>
+                                              <asp:MenuItem NavigateUrl="~/AdminPages/Admin.aspx" Text="Upload"/>
+                                              <asp:MenuItem NavigateUrl="~/UserPages/Asset.aspx" Text="Assets"/>
+                                              <asp:MenuItem NavigateUrl="~/AdminPages/Users.aspx" Text="Users"/>
+                                              <asp:MenuItem NavigateUrl="~/AdminPages/Reports.aspx" Text="Reports"/>
+                                              <asp:MenuItem NavigateUrl="~/AdminPages/Tags.aspx" Text="Tags"/>
+                                          </Items>
+                                      </asp:Menu>
+                                  </ContentTemplate>
+                              </asp:RoleGroup>
+                          </RoleGroups>
+                      </asp:LoginView>
+                  </div>
+                  <div id="navDiv" style="position:absolute; top:68px; right:20px;">
+                      <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="" 
+                    LogoutPageUrl="Default.aspx" LogoutText="  (Logout)  " style="color:White; padding-left:5px; padding-top: 5px; font-weight:bold;" 
+                        align = "right" Height="16px" Visible="True" />
+                  </div>
+              </div>
+              
+           </asp:ContentPlaceHolder>
+        </div>
+
+    
+        <div class="sidebar">
+        <asp:ContentPlaceHolder ID="SidebarContent" runat="server">
+            
+        </asp:ContentPlaceHolder>
+        </div>
+     
+                <asp:ContentPlaceHolder ID="mainContent" runat="server">   
+                      <div id="main" align="center" style="width: 800px; margin:auto;">
+                      </div>    
+                </asp:ContentPlaceHolder>              
+ 
+   
+     </div>            
+             <%--   <div class="loginBar" align="left">
+                   <asp:ContentPlaceHolder ID="LoginContent" runat="server">
+                       aadasdasdsad
+                   </asp:ContentPlaceHolder>    
+                </div>--%>
+                <%--<div id="tabsBar">  
+                  <ul>
+                    <li class="Tab">
+                      <a href="./Academics/" title="Courses" style="color:white">Assets</a></li>
+                    <li class="Tab">
+                      <a href="./Academics/" title="Courses" style="color:white">Admin</a></li>
+                    <li class="tabsBar">
+                      <a href="./Academics/" title="Courses" style="color:white">Help</a></li>
+                  </ul>
+                </div>--%>
+    <%--<div class="page">     
+        <div class="sidebar">
+        <asp:ContentPlaceHolder ID="SidebarContent" runat="server">
+
+        </asp:ContentPlaceHolder>
+        </div>
+
+    </div>
+
+    
+    <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+    </div>--%>
+       
+  </form>  
+</body>
+</html>

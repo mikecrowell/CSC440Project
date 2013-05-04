@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="csc440_fall2012_team2" Class="LinqToAllDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=cscsql2.carrollu.edu;Initial Catalog=csc440_fall2012_team2;Persist Security Info=True;User ID=csc440_fall2012_team2" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="csc440_fall2012_team2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.APPUSER" Member="APPUSERs">
+    <Type Name="APPUSER">
+      <Column Name="APPUSER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FIRST_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LAST_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="USER_LOGIN" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="USER_PASSWORD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IS_ADMINISTRATOR" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IS_ACTIVE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="APPUSER_USER_ACCESS" Member="USER_ACCESSes" ThisKey="APPUSER_ID" OtherKey="APPUSER_ID" Type="USER_ACCESS" />
+      <Association Name="APPUSER_FILELOG" Member="FILELOGs" ThisKey="APPUSER_ID" OtherKey="APPUSER_ID" Type="FILELOG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CATEGORY" Member="CATEGORies">
+    <Type Name="CATEGORY">
+      <Column Name="CATEGORY_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CATEGORY_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CATEGORY_DESC" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="CATEGORY_EXTENSION" Member="EXTENSIONs" ThisKey="CATEGORY_ID" OtherKey="CATEGORY_ID" Type="EXTENSION" />
+      <Association Name="CATEGORY_USER_ACCESS" Member="USER_ACCESSes" ThisKey="CATEGORY_ID" OtherKey="CATEGORY_ID" Type="USER_ACCESS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EXTENSION" Member="EXTENSIONs">
+    <Type Name="EXTENSION">
+      <Column Name="EXTENSION_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILE_EXTENSION" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="EXTENSION_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CATEGORY_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="EXTENSION_DATAFILE" Member="DATAFILE" ThisKey="EXTENSION_ID" OtherKey="DF_ID" Type="DATAFILE" Cardinality="One" />
+      <Association Name="CATEGORY_EXTENSION" Member="CATEGORY" ThisKey="CATEGORY_ID" OtherKey="CATEGORY_ID" Type="CATEGORY" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FILE_TAG" Member="FILE_TAGs">
+    <Type Name="FILE_TAG">
+      <Column Name="TAG_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DF_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="TAG_FILE_TAG" Member="TAG" ThisKey="TAG_ID" OtherKey="TAG_ID" Type="TAG" IsForeignKey="true" />
+      <Association Name="DATAFILE_FILE_TAG" Member="DATAFILE" ThisKey="DF_ID" OtherKey="DF_ID" Type="DATAFILE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRANSACTIONTYPE" Member="TRANSACTIONTYPEs">
+    <Type Name="TRANSACTIONTYPE">
+      <Column Name="TTYPE_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TTYPE_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TTYPE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TRANSACTIONTYPE_FILELOG" Member="FILELOGs" ThisKey="TTYPE_ID" OtherKey="TTYPE_ID" Type="FILELOG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USER_ACCESS" Member="USER_ACCESSes">
+    <Type Name="USER_ACCESS">
+      <Column Name="CATEGORY_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="APPUSER_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CATEGORY_USER_ACCESS" Member="CATEGORY" ThisKey="CATEGORY_ID" OtherKey="CATEGORY_ID" Type="CATEGORY" IsForeignKey="true" />
+      <Association Name="APPUSER_USER_ACCESS" Member="APPUSER" ThisKey="APPUSER_ID" OtherKey="APPUSER_ID" Type="APPUSER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TEST_DUC" Member="TEST_DUCs">
+    <Type Name="TEST_DUC">
+      <Column Name="File_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="File_FullName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="File_Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="File_Ext" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FILELOG" Member="FILELOGs">
+    <Type Name="FILELOG">
+      <Column Name="FILELOG_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APPUSER_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LOG_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LOG_TIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TTYPE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="APPUSER_FILELOG" Member="APPUSER" ThisKey="APPUSER_ID" OtherKey="APPUSER_ID" Type="APPUSER" IsForeignKey="true" />
+      <Association Name="TRANSACTIONTYPE_FILELOG" Member="TRANSACTIONTYPE" ThisKey="TTYPE_ID" OtherKey="TTYPE_ID" Type="TRANSACTIONTYPE" IsForeignKey="true" />
+      <Association Name="DATAFILE_FILELOG" Member="DATAFILE" ThisKey="DF_ID" OtherKey="DF_ID" Type="DATAFILE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAG" Member="TAGs">
+    <Type Name="TAG">
+      <Column Name="TAG_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TAG_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IS_ACTIVE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="true" />
+      <Association Name="TAG_FILE_TAG" Member="FILE_TAGs" ThisKey="TAG_ID" OtherKey="TAG_ID" Type="FILE_TAG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DATAFILE" Member="DATAFILEs">
+    <Type Name="DATAFILE">
+      <Column Name="DF_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILE_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EXTENSION_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SHORT_DESC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LONG_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IS_ACTIVE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="DATAFILE_FILE_TAG" Member="FILE_TAGs" ThisKey="DF_ID" OtherKey="DF_ID" Type="FILE_TAG" />
+      <Association Name="DATAFILE_FILELOG" Member="FILELOGs" ThisKey="DF_ID" OtherKey="DF_ID" Type="FILELOG" />
+      <Association Name="EXTENSION_DATAFILE" Member="EXTENSION" ThisKey="DF_ID" OtherKey="EXTENSION_ID" Type="EXTENSION" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

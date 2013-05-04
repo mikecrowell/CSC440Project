@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56BC03F6-DC2D-4D21-BA51-E66A38AA10A0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DigitalAssetManagementSep28</RootNamespace>
+    <AssemblyName>DigitalAssetManagementSep28</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Extra Tools\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Extra Tools\zip-v1.9\Release\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="AdminPages\Admin.aspx" />
+    <Content Include="AdminPages\Tags.aspx" />
+    <Content Include="AdminPages\Reports.aspx" />
+    <Content Include="AdminPages\Users.aspx" />
+    <Content Include="DataFiles\Fireball.mp4" />
+    <Content Include="DataFiles\trickortreat.JPG" />
+    <Content Include="DataFiles\Winter Chimes-1.mp3" />
+    <Content Include="Extra Tools\zip-v1.9\Debug\Ionic.Zip.dll" />
+    <Content Include="Extra Tools\zip-v1.9\Debug\Ionic.Zip.pdb" />
+    <Content Include="Extra Tools\zip-v1.9\Debug\Ionic.Zip.xml" />
+    <Content Include="Extra Tools\zip-v1.9\Readme.txt" />
+    <Content Include="Extra Tools\zip-v1.9\Release\Ionic.Zip.dll" />
+    <Content Include="Images\carroll_logo.gif" />
+    <Content Include="Images\carroll_logo.jpg" />
+    <Content Include="Images\FLA_Example.png" />
+    <Content Include="Images\MOV_Example.png" />
+    <Content Include="Images\MP3_Example.jpg" />
+    <Content Include="Images\MP4_Example.jpg" />
+    <Content Include="Images\PDF_Example.jpg" />
+    <Content Include="Images\SWF_Example.png" />
+    <Content Include="Images\WAV_Example.png" />
+    <Content Include="Images\WMV_Example.png" />
+    <Content Include="UserPages\Asset.aspx" />
+    <Content Include="AdminPages\DatabaseTestPage.aspx" />
+    <Content Include="DataFiles\coding.jpg" />
+    <Content Include="DataFiles\Coffee-cup-coloring-page.gif" />
+    <Content Include="DataFiles\dilbert_software_engineering.gif" />
+    <Content Include="DataFiles\dr-seuss.jpg" />
+    <Content Include="DataFiles\evolution_2000.jpg" />
+    <Content Include="DataFiles\humor-penguins.gif" />
+    <Content Include="DataFiles\IMG_2300.JPG" />
+    <Content Include="DataFiles\MIKETEST001.jpg" />
+    <Content Include="DataFiles\MIKETEST002.jpg" />
+    <Content Include="DataFiles\packers.png" />
+    <Content Include="DucTestPage.aspx" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.pdb" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\LICENSE.txt" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\ReadMe.html" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\SanitizerProviders\AntiXSSLibrary.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\SanitizerProviders\HtmlSanitizationLibrary.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\SanitizerProviders\SanitizerProviders.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\DigitalAssetManagementSep28.dll" />
+    <Content Include="obj\Release\DigitalAssetManagementSep28.pdb" />
+    <Content Include="obj\Release\TempPE\LinqToAllData.designer.cs.dll" />
+    <Content Include="Scripts\Sidebar.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="TestDisplayControl.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountMembershipProvider.cs" />
+    <Compile Include="AccountRoleProvider.cs" />
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Tags.aspx.cs">
+      <DependentUpon>Tags.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Tags.aspx.designer.cs">
+      <DependentUpon>Tags.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataFileComparer.cs" />
+    <Compile Include="DisplayImage.cs" />
+    <Compile Include="DucTestPage.aspx.cs">
+      <DependentUpon>DucTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DucTestPage.aspx.designer.cs">
+      <DependentUpon>DucTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppUser.cs" />
+    <Compile Include="Models\FileReport.cs" />
+    <Compile Include="Models\UserReport.cs" />
+    <Compile Include="UserPages\Asset.aspx.cs">
+      <DependentUpon>Asset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Asset.aspx.designer.cs">
+      <DependentUpon>Asset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\DataAccess.cs" />
+    <Compile Include="AdminPages\DatabaseTestPage.aspx.cs">
+      <DependentUpon>DatabaseTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\DatabaseTestPage.aspx.designer.cs">
+      <DependentUpon>DatabaseTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataFile.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Extension.cs" />
+    <Compile Include="Models\FileLog.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LinqToAllData.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LinqToAllData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TestDucAccess.cs" />
+    <Compile Include="Models\Test_Duc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tag.cs" />
+    <Compile Include="TestDisplayControl.ascx.cs">
+      <DependentUpon>TestDisplayControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestDisplayControl.ascx.designer.cs">
+      <DependentUpon>TestDisplayControl.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="TestUploadedFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Extra Tools\AjaxControlToolkit.Binary.NET35\AjaxControlToolkitSampleSite.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataFiles\ER Diagram version 4.pdf" />
+    <None Include="DataFiles\ER_Diagram_v4_Auto Generated from SQL Server.pdf" />
+    <None Include="LinqToAllData.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LinqToAllData.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LinqToAllData.dbml.layout">
+      <DependentUpon>LinqToAllData.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ImagePreviewExtender\ImagePreviewExtender.csproj">
+      <Project>{41671B6A-94CB-4B3F-8F75-56B58D37166B}</Project>
+      <Name>ImagePreviewExtender</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15261</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

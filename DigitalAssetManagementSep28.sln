@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalAssetManagementSep28", "DigitalAssetManagementSep28\DigitalAssetManagementSep28.csproj", "{56BC03F6-DC2D-4D21-BA51-E66A38AA10A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImagePreviewExtender", "ImagePreviewExtender\ImagePreviewExtender.csproj", "{41671B6A-94CB-4B3F-8F75-56B58D37166B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FA7E516E-78E1-4D57-BC7E-FBE84E7D1C33}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Documents\DigitalAssetManagementSep28.vsd = ..\..\Documents\DigitalAssetManagementSep28.vsd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56BC03F6-DC2D-4D21-BA51-E66A38AA10A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56BC03F6-DC2D-4D21-BA51-E66A38AA10A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56BC03F6-DC2D-4D21-BA51-E66A38AA10A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56BC03F6-DC2D-4D21-BA51-E66A38AA10A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41671B6A-94CB-4B3F-8F75-56B58D37166B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41671B6A-94CB-4B3F-8F75-56B58D37166B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41671B6A-94CB-4B3F-8F75-56B58D37166B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41671B6A-94CB-4B3F-8F75-56B58D37166B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
